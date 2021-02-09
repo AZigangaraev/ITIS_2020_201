@@ -29,11 +29,9 @@ class AuthorizationViewController: UIViewController {
     }
 
     private func navigateToTweets() {
-        guard let controller: TwitterViewController = storyboard?.instantiateViewController(identifier: "TwitterViewController") else {
-            fatalError("Could not instantiate controller")
-        }
+        guard let navigationController = navigationController else { return }
 
-        navigationController?.pushViewController(controller, animated: true)
+        TwitterPresenter().start(in: navigationController)
     }
 }
 

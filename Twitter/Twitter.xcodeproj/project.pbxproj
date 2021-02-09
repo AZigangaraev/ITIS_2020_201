@@ -18,6 +18,7 @@
 		AE1B11CB25D2EB8600FDC346 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B11CA25D2EB8600FDC346 /* TweetCell.swift */; };
 		AE1B11CE25D2EC1800FDC346 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B11CD25D2EC1800FDC346 /* TwitterViewController.swift */; };
 		AE79636A25D2F2BE00DB12E0 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79636925D2F2BE00DB12E0 /* AuthorizationService.swift */; };
+		AE79636E25D2FCB200DB12E0 /* TwitterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79636D25D2FCB200DB12E0 /* TwitterPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AE1B11CA25D2EB8600FDC346 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		AE1B11CD25D2EC1800FDC346 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		AE79636925D2F2BE00DB12E0 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		AE79636D25D2FCB200DB12E0 /* TwitterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		AE1B11A925D2EA9100FDC346 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				AE79636C25D2FCA600DB12E0 /* Presenter */,
 				AE1B11C125D2EAAB00FDC346 /* ViewController */,
 				AE1B11C025D2EAA500FDC346 /* View */,
 				AE1B11BF25D2EA9F00FDC346 /* Model */,
@@ -104,6 +107,14 @@
 				AE1B11AE25D2EA9100FDC346 /* AuthorizationViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AE79636C25D2FCA600DB12E0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AE79636D25D2FCB200DB12E0 /* TwitterPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				AE1B11AF25D2EA9100FDC346 /* AuthorizationViewController.swift in Sources */,
 				AE1B11C825D2EAF100FDC346 /* Tweet.swift in Sources */,
 				AE1B11C325D2EAC000FDC346 /* TwitterDataService.swift in Sources */,
+				AE79636E25D2FCB200DB12E0 /* TwitterPresenter.swift in Sources */,
 				AE1B11CB25D2EB8600FDC346 /* TweetCell.swift in Sources */,
 				AE1B11AB25D2EA9100FDC346 /* AppDelegate.swift in Sources */,
 				AE1B11AD25D2EA9100FDC346 /* SceneDelegate.swift in Sources */,
