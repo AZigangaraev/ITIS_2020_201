@@ -13,10 +13,17 @@ protocol TwitterViewModel {
     func loadData()
     func like(tweet: Tweet)
     func retweet(tweet: Tweet)
+    func logOut()
 }
 
 class TwitterViewModelImplementation: TwitterViewModel {
-    private let twitterService: TwitterDataService = TwitterDataService()
+    func logOut() {
+        onFinish?()
+    }
+
+    var onFinish: (() -> Void)?
+
+    private let twitterService: TwitterDataService = MockTwitterDataService()
     private var cachedTweets: [Tweet] = []
     var tweets: (([Tweet]) -> Void)?
 

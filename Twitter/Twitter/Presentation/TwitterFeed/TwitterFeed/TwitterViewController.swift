@@ -12,7 +12,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     private var cells: [Tweet] = []
 
-    private var viewModel: TwitterViewModel = TwitterViewModelImplementation()
+    var viewModel: TwitterViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,8 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
             tableView.reloadData()
         }
         viewModel.loadData()
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(logOutTap))
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,5 +51,9 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
             viewModel.retweet(tweet: tweet)
         }
         return cell
+    }
+
+    @objc private func logOutTap() {
+        viewModel.logOut()
     }
 }
