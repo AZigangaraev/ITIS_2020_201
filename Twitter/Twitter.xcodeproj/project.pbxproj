@@ -19,6 +19,9 @@
 		AE1B11CE25D2EC1800FDC346 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1B11CD25D2EC1800FDC346 /* TwitterViewController.swift */; };
 		AE79636A25D2F2BE00DB12E0 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE79636925D2F2BE00DB12E0 /* AuthorizationService.swift */; };
 		AE85907125DC16390023C717 /* TwitterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85907025DC16390023C717 /* TwitterViewModel.swift */; };
+		AE85907625DC1C6D0023C717 /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85907525DC1C6D0023C717 /* PhoneNumberController.swift */; };
+		AE85907B25DC1DCB0023C717 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85907A25DC1DCB0023C717 /* AuthorizationCoordinator.swift */; };
+		AE85907E25DC20050023C717 /* TwitterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE85907D25DC20050023C717 /* TwitterCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		AE1B11CD25D2EC1800FDC346 /* TwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewController.swift; sourceTree = "<group>"; };
 		AE79636925D2F2BE00DB12E0 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		AE85907025DC16390023C717 /* TwitterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterViewModel.swift; sourceTree = "<group>"; };
+		AE85907525DC1C6D0023C717 /* PhoneNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
+		AE85907A25DC1DCB0023C717 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		AE85907D25DC20050023C717 /* TwitterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		AE1B11A925D2EA9100FDC346 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				AE85907825DC1D9D0023C717 /* Coordinators */,
 				AE85906F25DC162E0023C717 /* ViewModel */,
 				AE1B11C125D2EAAB00FDC346 /* ViewController */,
 				AE1B11C025D2EAA500FDC346 /* View */,
@@ -105,6 +112,7 @@
 			children = (
 				AE1B11CD25D2EC1800FDC346 /* TwitterViewController.swift */,
 				AE1B11AE25D2EA9100FDC346 /* AuthorizationViewController.swift */,
+				AE85907525DC1C6D0023C717 /* PhoneNumberController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -115,6 +123,15 @@
 				AE85907025DC16390023C717 /* TwitterViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AE85907825DC1D9D0023C717 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AE85907A25DC1DCB0023C717 /* AuthorizationCoordinator.swift */,
+				AE85907D25DC20050023C717 /* TwitterCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +206,7 @@
 			files = (
 				AE1B11AF25D2EA9100FDC346 /* AuthorizationViewController.swift in Sources */,
 				AE1B11C825D2EAF100FDC346 /* Tweet.swift in Sources */,
+				AE85907E25DC20050023C717 /* TwitterCoordinator.swift in Sources */,
 				AE1B11C325D2EAC000FDC346 /* TwitterDataService.swift in Sources */,
 				AE85907125DC16390023C717 /* TwitterViewModel.swift in Sources */,
 				AE1B11CB25D2EB8600FDC346 /* TweetCell.swift in Sources */,
@@ -196,6 +214,8 @@
 				AE1B11AD25D2EA9100FDC346 /* SceneDelegate.swift in Sources */,
 				AE1B11CE25D2EC1800FDC346 /* TwitterViewController.swift in Sources */,
 				AE79636A25D2F2BE00DB12E0 /* AuthorizationService.swift in Sources */,
+				AE85907625DC1C6D0023C717 /* PhoneNumberController.swift in Sources */,
+				AE85907B25DC1DCB0023C717 /* AuthorizationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
