@@ -23,7 +23,7 @@ class TwitterViewModelImplementation: TwitterViewModel {
 
     var onFinish: (() -> Void)?
 
-    private let twitterService: TwitterDataService = TwitterDataService()
+    private let twitterService: TwitterDataService = MockTwitterDataService()
     private var cachedTweets: [Tweet] = []
     var tweets: (([Tweet]) -> Void)?
 

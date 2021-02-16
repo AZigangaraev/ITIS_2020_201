@@ -13,7 +13,7 @@ class AuthorizationViewController: UIViewController {
 
     var onFinish: (() -> Void)?
 
-    private let authorizationService: AuthorizationService = AuthorizationService()
+    private let authorizationService: AuthorizationService = MockAuthorizationService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
