@@ -7,23 +7,35 @@
 
 import UIKit
 
-class TwitterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol TwitterView: AnyObject {
+    func set(tweets: [Tweet])
+}
+protocol TwitterViewControllerPresenter {
+    func loadData()
+    func retweet(tweet: Tweet)
+    func like(tweet: Tweet)
+}
+
+class TwitterViewController: UIViewController, TwitterView, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
 
+    var presenter: TwitterViewControllerPresenter?
     private var cells: [Tweet] = []
-
-    private let twitterService = TwitterDataService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        reloadData()
+        presenter?.loadData()
     }
 
-    private func reloadData() {
-        cells = twitterService.tweets
-        tableView.reloadData()
+    // MARK: - TwitterView
+
+    func set(tweets: [Tweet]) {
+        cells = tweets
+        tableView?.reloadData()
     }
+
+    // MARK: - Table view
 
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -44,24 +56,10 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         let tweet = cells[indexPath.row]
         cell.tweet = tweet
         cell.likeTap = { [unowned self] in
-            twitterService.like(tweet: tweet) { [weak self] result in
-                switch result {
-                    case .success:
-                        self?.reloadData()
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+            presenter?.like(tweet: tweet)
         }
         cell.retweetTap = { [unowned self] in
-            twitterService.retweet(tweet: tweet) { [weak self] result in
-                switch result {
-                    case .success:
-                        self?.reloadData()
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+            presenter?.retweet(tweet: tweet)
         }
         return cell
     }
