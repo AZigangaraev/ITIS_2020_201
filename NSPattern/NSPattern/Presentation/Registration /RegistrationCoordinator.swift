@@ -10,6 +10,11 @@ import UIKit
 class RegistrationCoordinator {
     
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    private let serviceFactory: ServiceFactory
+    
+    init(factoryService: ServiceFactory) {
+        serviceFactory = factoryService
+    }
     
     func start() -> UIViewController  {
         registrationController()
@@ -18,6 +23,7 @@ class RegistrationCoordinator {
     private func registrationController() -> UIViewController {
         let viewController: RegistrationViewController = storyboard.instantiateViewController(identifier: "RegistrationViewController")
         let viewModel = HardCodeRegistrationViewModel()
+        viewModel.regService = serviceFactory.makeRegistorService()
         viewModel.onFinish = { [weak viewController] in
             viewController?.navigationController?.popToRootViewController(animated: true)
         }

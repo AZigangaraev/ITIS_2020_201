@@ -19,6 +19,7 @@
 		A142B03A25E4FCBB00437BB6 /* HardCodeRegistationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142B03925E4FCBB00437BB6 /* HardCodeRegistationService.swift */; };
 		A142B04125E50ADB00437BB6 /* BookViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142B04025E50ADB00437BB6 /* BookViewCoordinator.swift */; };
 		A142B04825E52A7400437BB6 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142B04725E52A7400437BB6 /* AuthViewModel.swift */; };
+		A142B04C25E5475200437BB6 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A142B04B25E5475200437BB6 /* ServiceFactory.swift */; };
 		A189A6F325E4439C00C6E42D /* BooksTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189A6F225E4439C00C6E42D /* BooksTableViewModel.swift */; };
 		A189A6FD25E44B1D00C6E42D /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189A6FC25E44B1D00C6E42D /* BookTableViewCell.swift */; };
 		A189A70125E4553A00C6E42D /* BooksTableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A189A70025E4553A00C6E42D /* BooksTableViewCoordinator.swift */; };
@@ -49,6 +50,7 @@
 		A142B03925E4FCBB00437BB6 /* HardCodeRegistationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodeRegistationService.swift; sourceTree = "<group>"; };
 		A142B04025E50ADB00437BB6 /* BookViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewCoordinator.swift; sourceTree = "<group>"; };
 		A142B04725E52A7400437BB6 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		A142B04B25E5475200437BB6 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		A189A6F225E4439C00C6E42D /* BooksTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewModel.swift; sourceTree = "<group>"; };
 		A189A6FC25E44B1D00C6E42D /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		A189A70025E4553A00C6E42D /* BooksTableViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTableViewCoordinator.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A142B03025E4FC0300437BB6 /* BooksUserDefaults.swift */,
+				A142B04B25E5475200437BB6 /* ServiceFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				A189A6F325E4439C00C6E42D /* BooksTableViewModel.swift in Sources */,
 				A189A70C25E4F98C00C6E42D /* RegistrationCoordinator.swift in Sources */,
 				A1BB9B9D25E4009F003AA7B8 /* HardCodeAuthService.swift in Sources */,
+				A142B04C25E5475200437BB6 /* ServiceFactory.swift in Sources */,
 				A189A70125E4553A00C6E42D /* BooksTableViewCoordinator.swift in Sources */,
 				A128393625DFDA1C003B6BA1 /* SceneDelegate.swift in Sources */,
 				A142B03A25E4FCBB00437BB6 /* HardCodeRegistationService.swift in Sources */,

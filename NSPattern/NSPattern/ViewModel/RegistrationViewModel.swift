@@ -13,12 +13,12 @@ protocol RegistrationViewModel {
 
 class HardCodeRegistrationViewModel: RegistrationViewModel {
     
-    var regService : RegistrationService = HardCodeRegistationService()
+    var regService : RegistrationService?
     
     var onFinish: (() -> Void)?
     
     func saveData(username: String, password: String) {
-        regService.saveData(username: username, password: password)
+        regService?.saveData(username: username, password: password)
         onFinish?()
     }
     

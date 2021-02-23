@@ -11,6 +11,12 @@ class BooksTableViewCoordinator {
     
     private let storyboard = UIStoryboard(name: "Main", bundle: nil)
     
+    private let serviceFactory: ServiceFactory
+    
+    init(factoryService: ServiceFactory) {
+        serviceFactory = factoryService
+    }
+    
     func start() -> UIViewController {
         tableViewController()
     }
@@ -18,7 +24,7 @@ class BooksTableViewCoordinator {
     private func tableViewController() -> UIViewController {
         let booksTableViewController: BooksTableViewController = storyboard.instantiateViewController(identifier: "BooksTableViewController")
         let viewModel = HardCodeBooksTableViewModel()
-        viewModel.booksService = HardCodeBookDataService()
+        viewModel.booksService = serviceFactory.makeBooksDataService()
         viewModel.onNextScreen = { [weak booksTableViewController] (book) in
             if let bookViewController = BookViewCoordinator().start() as? BookViewController {
                 bookViewController.loadViewIfNeeded()
