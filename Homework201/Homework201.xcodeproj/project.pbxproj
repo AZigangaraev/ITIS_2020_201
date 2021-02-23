@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		711C86BD25E45D4F00A28D48 /* BookDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86BC25E45D4F00A28D48 /* BookDetailPresenter.swift */; };
+		711C86C025E4651400A28D48 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86BF25E4651400A28D48 /* BookDetailViewController.swift */; };
+		711C86C425E46F2B00A28D48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86C325E46F2B00A28D48 /* User.swift */; };
+		711C86C725E4704100A28D48 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86C625E4704100A28D48 /* UserService.swift */; };
+		711C86CA25E4718200A28D48 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86C925E4718200A28D48 /* MockUserService.swift */; };
+		711C86CD25E4782600A28D48 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86CC25E4782600A28D48 /* AuthorizationService.swift */; };
+		711C86D025E4783200A28D48 /* MockAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86CF25E4783200A28D48 /* MockAuthorizationService.swift */; };
+		711C86D925E4E9BE00A28D48 /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86D825E4E9BE00A28D48 /* AuthorizationCoordinator.swift */; };
+		711C86DC25E4EAF900A28D48 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86DB25E4EAF900A28D48 /* AuthorizationPresenter.swift */; };
+		711C86DF25E4EB0800A28D48 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711C86DE25E4EB0800A28D48 /* AuthorizationViewController.swift */; };
+		71832AA825E3E334000773F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71832AA725E3E334000773F1 /* AppDelegate.swift */; };
+		71832AAA25E3E334000773F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71832AA925E3E334000773F1 /* SceneDelegate.swift */; };
+		71832AAF25E3E334000773F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71832AAD25E3E334000773F1 /* Main.storyboard */; };
+		71832AB125E3E337000773F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71832AB025E3E337000773F1 /* Assets.xcassets */; };
+		71832AB425E3E337000773F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71832AB225E3E337000773F1 /* LaunchScreen.storyboard */; };
+		7185EC8525E504FA0027D073 /* UserBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC8425E504FA0027D073 /* UserBooksViewController.swift */; };
+		7185EC8925E5102D0027D073 /* UserBooksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC8825E5102D0027D073 /* UserBooksPresenter.swift */; };
+		7185EC8C25E517640027D073 /* ReadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC8B25E517640027D073 /* ReadingViewController.swift */; };
+		7185EC8F25E518780027D073 /* ReadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC8E25E518780027D073 /* ReadingPresenter.swift */; };
+		7185EC9B25E5283F0027D073 /* MockBooksDataService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC9A25E5283F0027D073 /* MockBooksDataService2.swift */; };
+		7185EC9E25E528E90027D073 /* MockUserService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185EC9D25E528E90027D073 /* MockUserService2.swift */; };
+		7185ECA125E5295C0027D073 /* MockAuthorizationService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185ECA025E5295C0027D073 /* MockAuthorizationService2.swift */; };
+		7185ECAF25E52DD30027D073 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185ECAE25E52DD30027D073 /* ServiceFactory.swift */; };
+		7185ECB225E52E130027D073 /* MockServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185ECB125E52E130027D073 /* MockServiceFactory.swift */; };
+		7185ECB525E52E350027D073 /* MockServiceFactory2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7185ECB425E52E350027D073 /* MockServiceFactory2.swift */; };
+		71DEB5D525E41446005141CE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5D425E41446005141CE /* Book.swift */; };
+		71DEB5DA25E415AC005141CE /* BooksDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5D925E415AC005141CE /* BooksDataService.swift */; };
+		71DEB5DD25E418A9005141CE /* MockBooksDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5DC25E418A9005141CE /* MockBooksDataService.swift */; };
+		71DEB5E125E42962005141CE /* BookStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5E025E42962005141CE /* BookStoreViewController.swift */; };
+		71DEB5E625E42C3E005141CE /* BookStorePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5E525E42C3E005141CE /* BookStorePresenter.swift */; };
+		71DEB5F225E4340B005141CE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5F125E4340B005141CE /* AppCoordinator.swift */; };
+		71DEB5F625E437EE005141CE /* ViewControllerInstantiater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5F525E437EE005141CE /* ViewControllerInstantiater.swift */; };
+		71DEB5FE25E44649005141CE /* BookStoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB5FD25E44649005141CE /* BookStoreCoordinator.swift */; };
+		71DEB60125E44743005141CE /* UserBooksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DEB60025E44743005141CE /* UserBooksCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		711C86BC25E45D4F00A28D48 /* BookDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPresenter.swift; sourceTree = "<group>"; };
+		711C86BF25E4651400A28D48 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		711C86C325E46F2B00A28D48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		711C86C625E4704100A28D48 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		711C86C925E4718200A28D48 /* MockUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService.swift; sourceTree = "<group>"; };
+		711C86CC25E4782600A28D48 /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		711C86CF25E4783200A28D48 /* MockAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthorizationService.swift; sourceTree = "<group>"; };
+		711C86D825E4E9BE00A28D48 /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		711C86DB25E4EAF900A28D48 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
+		711C86DE25E4EB0800A28D48 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		71832AA425E3E334000773F1 /* Homework201.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework201.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71832AA725E3E334000773F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71832AA925E3E334000773F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		71832AAE25E3E334000773F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71832AB025E3E337000773F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71832AB325E3E337000773F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71832AB525E3E337000773F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7185EC8425E504FA0027D073 /* UserBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBooksViewController.swift; sourceTree = "<group>"; };
+		7185EC8825E5102D0027D073 /* UserBooksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBooksPresenter.swift; sourceTree = "<group>"; };
+		7185EC8B25E517640027D073 /* ReadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingViewController.swift; sourceTree = "<group>"; };
+		7185EC8E25E518780027D073 /* ReadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingPresenter.swift; sourceTree = "<group>"; };
+		7185EC9A25E5283F0027D073 /* MockBooksDataService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBooksDataService2.swift; sourceTree = "<group>"; };
+		7185EC9D25E528E90027D073 /* MockUserService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserService2.swift; sourceTree = "<group>"; };
+		7185ECA025E5295C0027D073 /* MockAuthorizationService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthorizationService2.swift; sourceTree = "<group>"; };
+		7185ECAE25E52DD30027D073 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		7185ECB125E52E130027D073 /* MockServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceFactory.swift; sourceTree = "<group>"; };
+		7185ECB425E52E350027D073 /* MockServiceFactory2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceFactory2.swift; sourceTree = "<group>"; };
+		71DEB5D425E41446005141CE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		71DEB5D925E415AC005141CE /* BooksDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDataService.swift; sourceTree = "<group>"; };
+		71DEB5DC25E418A9005141CE /* MockBooksDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBooksDataService.swift; sourceTree = "<group>"; };
+		71DEB5E025E42962005141CE /* BookStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreViewController.swift; sourceTree = "<group>"; };
+		71DEB5E525E42C3E005141CE /* BookStorePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStorePresenter.swift; sourceTree = "<group>"; };
+		71DEB5F125E4340B005141CE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		71DEB5F525E437EE005141CE /* ViewControllerInstantiater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiater.swift; sourceTree = "<group>"; };
+		71DEB5FD25E44649005141CE /* BookStoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreCoordinator.swift; sourceTree = "<group>"; };
+		71DEB60025E44743005141CE /* UserBooksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBooksCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71832AA125E3E334000773F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		711C86B825E4511B00A28D48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5E025E42962005141CE /* BookStoreViewController.swift */,
+				711C86BF25E4651400A28D48 /* BookDetailViewController.swift */,
+				711C86DE25E4EB0800A28D48 /* AuthorizationViewController.swift */,
+				7185EC8425E504FA0027D073 /* UserBooksViewController.swift */,
+				7185EC8B25E517640027D073 /* ReadingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		711C86D325E47F2D00A28D48 /* BooksDataService */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5D925E415AC005141CE /* BooksDataService.swift */,
+				71DEB5DC25E418A9005141CE /* MockBooksDataService.swift */,
+				7185EC9A25E5283F0027D073 /* MockBooksDataService2.swift */,
+			);
+			path = BooksDataService;
+			sourceTree = "<group>";
+		};
+		711C86D425E47F3A00A28D48 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				711C86C625E4704100A28D48 /* UserService.swift */,
+				711C86C925E4718200A28D48 /* MockUserService.swift */,
+				7185EC9D25E528E90027D073 /* MockUserService2.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		711C86D525E47F5400A28D48 /* AuthorizationService */ = {
+			isa = PBXGroup;
+			children = (
+				711C86CC25E4782600A28D48 /* AuthorizationService.swift */,
+				711C86CF25E4783200A28D48 /* MockAuthorizationService.swift */,
+				7185ECA025E5295C0027D073 /* MockAuthorizationService2.swift */,
+			);
+			path = AuthorizationService;
+			sourceTree = "<group>";
+		};
+		71832A9B25E3E334000773F1 = {
+			isa = PBXGroup;
+			children = (
+				71832AA625E3E334000773F1 /* Homework201 */,
+				71832AA525E3E334000773F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71832AA525E3E334000773F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71832AA425E3E334000773F1 /* Homework201.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71832AA625E3E334000773F1 /* Homework201 */ = {
+			isa = PBXGroup;
+			children = (
+				71832AA725E3E334000773F1 /* AppDelegate.swift */,
+				71832AA925E3E334000773F1 /* SceneDelegate.swift */,
+				71DEB5EE25E43200005141CE /* Coordinator */,
+				71DEB5E425E42C28005141CE /* Presenter */,
+				711C86B825E4511B00A28D48 /* View */,
+				71DEB5D725E41523005141CE /* Service */,
+				71DEB5D325E41417005141CE /* Model */,
+				71DEB5F425E437D4005141CE /* Extensions */,
+				71832AAD25E3E334000773F1 /* Main.storyboard */,
+				71832AB025E3E337000773F1 /* Assets.xcassets */,
+				71832AB225E3E337000773F1 /* LaunchScreen.storyboard */,
+				71832AB525E3E337000773F1 /* Info.plist */,
+			);
+			path = Homework201;
+			sourceTree = "<group>";
+		};
+		7185ECAD25E52DBA0027D073 /* ServiceFactory */ = {
+			isa = PBXGroup;
+			children = (
+				7185ECAE25E52DD30027D073 /* ServiceFactory.swift */,
+				7185ECB125E52E130027D073 /* MockServiceFactory.swift */,
+				7185ECB425E52E350027D073 /* MockServiceFactory2.swift */,
+			);
+			path = ServiceFactory;
+			sourceTree = "<group>";
+		};
+		71DEB5D325E41417005141CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5D425E41446005141CE /* Book.swift */,
+				711C86C325E46F2B00A28D48 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71DEB5D725E41523005141CE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7185ECAD25E52DBA0027D073 /* ServiceFactory */,
+				711C86D325E47F2D00A28D48 /* BooksDataService */,
+				711C86D425E47F3A00A28D48 /* UserService */,
+				711C86D525E47F5400A28D48 /* AuthorizationService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		71DEB5E425E42C28005141CE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5E525E42C3E005141CE /* BookStorePresenter.swift */,
+				711C86BC25E45D4F00A28D48 /* BookDetailPresenter.swift */,
+				711C86DB25E4EAF900A28D48 /* AuthorizationPresenter.swift */,
+				7185EC8825E5102D0027D073 /* UserBooksPresenter.swift */,
+				7185EC8E25E518780027D073 /* ReadingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		71DEB5EE25E43200005141CE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5F125E4340B005141CE /* AppCoordinator.swift */,
+				71DEB5FD25E44649005141CE /* BookStoreCoordinator.swift */,
+				71DEB60025E44743005141CE /* UserBooksCoordinator.swift */,
+				711C86D825E4E9BE00A28D48 /* AuthorizationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		71DEB5F425E437D4005141CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				71DEB5F525E437EE005141CE /* ViewControllerInstantiater.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71832AA325E3E334000773F1 /* Homework201 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71832AB825E3E337000773F1 /* Build configuration list for PBXNativeTarget "Homework201" */;
+			buildPhases = (
+				71832AA025E3E334000773F1 /* Sources */,
+				71832AA125E3E334000773F1 /* Frameworks */,
+				71832AA225E3E334000773F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homework201;
+			productName = Homework201;
+			productReference = 71832AA425E3E334000773F1 /* Homework201.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71832A9C25E3E334000773F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					71832AA325E3E334000773F1 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 71832A9F25E3E334000773F1 /* Build configuration list for PBXProject "Homework201" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71832A9B25E3E334000773F1;
+			productRefGroup = 71832AA525E3E334000773F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71832AA325E3E334000773F1 /* Homework201 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71832AA225E3E334000773F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71832AB425E3E337000773F1 /* LaunchScreen.storyboard in Resources */,
+				71832AB125E3E337000773F1 /* Assets.xcassets in Resources */,
+				71832AAF25E3E334000773F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71832AA025E3E334000773F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711C86DF25E4EB0800A28D48 /* AuthorizationViewController.swift in Sources */,
+				7185EC9B25E5283F0027D073 /* MockBooksDataService2.swift in Sources */,
+				7185EC9E25E528E90027D073 /* MockUserService2.swift in Sources */,
+				711C86CA25E4718200A28D48 /* MockUserService.swift in Sources */,
+				71DEB5DA25E415AC005141CE /* BooksDataService.swift in Sources */,
+				71DEB5F225E4340B005141CE /* AppCoordinator.swift in Sources */,
+				71DEB5D525E41446005141CE /* Book.swift in Sources */,
+				711C86C425E46F2B00A28D48 /* User.swift in Sources */,
+				7185EC8925E5102D0027D073 /* UserBooksPresenter.swift in Sources */,
+				71DEB5F625E437EE005141CE /* ViewControllerInstantiater.swift in Sources */,
+				71DEB5E125E42962005141CE /* BookStoreViewController.swift in Sources */,
+				711C86CD25E4782600A28D48 /* AuthorizationService.swift in Sources */,
+				711C86D025E4783200A28D48 /* MockAuthorizationService.swift in Sources */,
+				71DEB5E625E42C3E005141CE /* BookStorePresenter.swift in Sources */,
+				711C86BD25E45D4F00A28D48 /* BookDetailPresenter.swift in Sources */,
+				7185ECB225E52E130027D073 /* MockServiceFactory.swift in Sources */,
+				7185EC8F25E518780027D073 /* ReadingPresenter.swift in Sources */,
+				7185ECB525E52E350027D073 /* MockServiceFactory2.swift in Sources */,
+				7185EC8525E504FA0027D073 /* UserBooksViewController.swift in Sources */,
+				71832AA825E3E334000773F1 /* AppDelegate.swift in Sources */,
+				711C86DC25E4EAF900A28D48 /* AuthorizationPresenter.swift in Sources */,
+				71DEB60125E44743005141CE /* UserBooksCoordinator.swift in Sources */,
+				711C86C725E4704100A28D48 /* UserService.swift in Sources */,
+				7185ECAF25E52DD30027D073 /* ServiceFactory.swift in Sources */,
+				71DEB5FE25E44649005141CE /* BookStoreCoordinator.swift in Sources */,
+				71DEB5DD25E418A9005141CE /* MockBooksDataService.swift in Sources */,
+				71832AAA25E3E334000773F1 /* SceneDelegate.swift in Sources */,
+				7185ECA125E5295C0027D073 /* MockAuthorizationService2.swift in Sources */,
+				711C86D925E4E9BE00A28D48 /* AuthorizationCoordinator.swift in Sources */,
+				711C86C025E4651400A28D48 /* BookDetailViewController.swift in Sources */,
+				7185EC8C25E517640027D073 /* ReadingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		71832AAD25E3E334000773F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71832AAE25E3E334000773F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71832AB225E3E337000773F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71832AB325E3E337000773F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71832AB625E3E337000773F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71832AB725E3E337000773F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71832AB925E3E337000773F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Homework201/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RobertMukhtarov.Homework201;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71832ABA25E3E337000773F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Homework201/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = RobertMukhtarov.Homework201;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71832A9F25E3E334000773F1 /* Build configuration list for PBXProject "Homework201" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71832AB625E3E337000773F1 /* Debug */,
+				71832AB725E3E337000773F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71832AB825E3E337000773F1 /* Build configuration list for PBXNativeTarget "Homework201" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71832AB925E3E337000773F1 /* Debug */,
+				71832ABA25E3E337000773F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71832A9C25E3E334000773F1 /* Project object */;
+}
