@@ -1,14 +1,17 @@
 //
 //  AppDelegate.swift
-//  Twitter
+//  MathMems
 //
-//  Created by Teacher on 09.02.2021.
+//  Created by Никита Ляпустин on 21.02.2021.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

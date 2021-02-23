@@ -11,7 +11,9 @@ class AuthorizationViewController: UIViewController {
     @IBOutlet private var usernameField: UITextField!
     @IBOutlet private var passwordField: UITextField!
 
-    private let authorizationService: AuthorizationService = AuthorizationService()
+    var onFinish: (() -> Void)?
+
+    private let authorizationService: AuthorizationService = MockAuthorizationService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +23,15 @@ class AuthorizationViewController: UIViewController {
         authorizationService.authorize(username: usernameField.text ?? "", password: passwordField.text ?? "") { result in
             switch result {
                 case .success:
-                    self.navigateToTweets()
+                    self.finish()
                 case .failure(let error):
                     print("Could not authorize: \(error)")
             }
         }
     }
 
-    private func navigateToTweets() {
-        guard let controller: TwitterViewController = storyboard?.instantiateViewController(identifier: "TwitterViewController") else {
-            fatalError("Could not instantiate controller")
-        }
-
-        navigationController?.pushViewController(controller, animated: true)
+    private func finish() {
+        onFinish?()
     }
 }
 

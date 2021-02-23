@@ -7,11 +7,7 @@
 
 import Foundation
 
-enum TwitterError: Error {
-    case tweetNotFound
-}
-
-class TwitterDataService {
+class MockTwitterDataService: TwitterDataService {
     var tweets: [Tweet] = [
         Tweet(username: "User 1", text: "Hello world 1", likes: 42),
         Tweet(username: "User 2", text: "Hello world 2", likes: 44),

@@ -12,17 +12,18 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
 
     private var cells: [Tweet] = []
 
-    private let twitterService = TwitterDataService()
+    var viewModel: TwitterViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        reloadData()
-    }
+        viewModel.tweets = { [unowned self] in
+            cells = $0
+            tableView.reloadData()
+        }
+        viewModel.loadData()
 
-    private func reloadData() {
-        cells = twitterService.tweets
-        tableView.reloadData()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log out", style: .plain, target: self, action: #selector(logOutTap))
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,25 +45,15 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         let tweet = cells[indexPath.row]
         cell.tweet = tweet
         cell.likeTap = { [unowned self] in
-            twitterService.like(tweet: tweet) { [weak self] result in
-                switch result {
-                    case .success:
-                        self?.reloadData()
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+            viewModel.like(tweet: tweet)
         }
         cell.retweetTap = { [unowned self] in
-            twitterService.retweet(tweet: tweet) { [weak self] result in
-                switch result {
-                    case .success:
-                        self?.reloadData()
-                    case .failure(let error):
-                        print(error)
-                }
-            }
+            viewModel.retweet(tweet: tweet)
         }
         return cell
+    }
+
+    @objc private func logOutTap() {
+        viewModel.logOut()
     }
 }
