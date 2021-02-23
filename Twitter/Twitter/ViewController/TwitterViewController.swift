@@ -45,7 +45,7 @@ class TwitterViewController: UIViewController, UITableViewDataSource, UITableVie
         let tweet = cells[indexPath.row]
         cell.tweet = tweet
         cell.likeTap = { [unowned self] in
-            viewModel.like(tweet: tweet)
+            viewModel.like(tweet: tweet) 
         }
         cell.retweetTap = { [unowned self] in
             viewModel.retweet(tweet: tweet)
