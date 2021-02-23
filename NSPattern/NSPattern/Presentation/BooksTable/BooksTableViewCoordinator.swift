@@ -25,8 +25,8 @@ class BooksTableViewCoordinator {
         let booksTableViewController: BooksTableViewController = storyboard.instantiateViewController(identifier: "BooksTableViewController")
         let viewModel = HardCodeBooksTableViewModel()
         viewModel.booksService = serviceFactory.makeBooksDataService()
-        if let bookViewController = BookViewCoordinator().start() as? BookViewController {
-            viewModel.onNextScreen = { [weak booksTableViewController] (book) in
+        viewModel.onNextScreen = { [weak booksTableViewController] (book) in
+            if let bookViewController = BookViewCoordinator().start() as? BookViewController {
                 bookViewController.loadViewIfNeeded()
                 bookViewController.setData(book: book)
                 booksTableViewController?.navigationController?.pushViewController(bookViewController, animated: true)

@@ -25,16 +25,13 @@ class AuthorizationCoordinator {
         let authViewModel = HardCodeAuthViewModel()
         authViewModel.authService = serviceFactory.makeAuthService()
         authViewController.authViewModel = authViewModel
-        
-        let booksTableViewController = BooksTableViewCoordinator(factoryService: serviceFactory).start()
-        booksTableViewController.navigationItem.title = "Books"
-        
-        let regViewController = RegistrationCoordinator(factoryService: serviceFactory).start()
-        
-        authViewModel.onSuccesAuth = { [weak authViewController] in
+        authViewModel.onSuccesAuth = { [weak authViewController, weak self] in
+            let booksTableViewController = BooksTableViewCoordinator(factoryService: self?.serviceFactory ?? MyServiceFactory()).start()
+            booksTableViewController.navigationItem.title = "Books"
             authViewController?.navigationController?.pushViewController(booksTableViewController, animated: true)
         }
-        authViewModel.onRegScreen = { [weak authViewController] in
+        authViewModel.onRegScreen = { [weak authViewController, weak self] in
+            let regViewController = RegistrationCoordinator(factoryService: self?.serviceFactory ?? MyServiceFactory()).start()
             authViewController?.navigationController?.pushViewController(regViewController, animated: true)
         }
         
