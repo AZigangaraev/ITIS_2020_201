@@ -17,9 +17,9 @@ class WeatherViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath) as? WeatherCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherForecastCell", for: indexPath) as? WeatherCell else { return UICollectionViewCell() }
     
-        cell = weatherService.getWeather() as! WeatherCell
+        cell.configure(with: weatherService.getWeather())
         
         return cell
     }
